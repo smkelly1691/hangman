@@ -30,11 +30,12 @@
     <li>Check if letter has been picked already [checkLetter()]</li>
     <li>Check if letter is contained within generated word [checkWord()]</li>
     <li>Populate word space if letter is within word [populateWord()]</li>
-    <li>If incorrect guess, update hangman (add body part) [updateHangman()]
+    <li>If incorrect guess, update hangman (add body part) [updateHangman()]</li>
     <li>Display message of result and instructions [displayMessage()]</li>
-    <li>Update number of guesses left (-1) [updateNumGuesses()]
+    <li>Update number of guesses left (-1) [updateNumGuesses()]</li>
     <li>Check the state of the game (win/loss) [checkWin()]</li>
     <li>Render game state to the Dom [render()]</li>
+  </ul>
 <h4>When game is over:</h4>
   <ul>
     <li>Display message of result [displayMessage()]</li>
