@@ -46,17 +46,18 @@
 <a href="https://imgur.com/8u0I1b2"><img src="https://i.imgur.com/8u0I1b2.jpg" title="source: imgur.com" /></a>
 
 <h3>Application State Data</h3>
-<ul>What does the application need to "remember" throughout its execution: </ul>
-  <li>words</li>
-  <ul>
-    <li>We will use an array with words that can be pulled at random to choose a word for the player to guess</li>
-  </ul>
-  <li>guesses</li>
-  <ul>
-    <li>The application must keep track of how many guesses are left and update the hangman picture and the value of number of guesses left on the screen<li>
-    <li>We will use a variable called guessesLeft that decreases with each guess the player makes and if reaches zero will cause the game to be over
-  </ul>
-  <li>letters</li>
-  <ul>
-    <li>We will use an array with all the letters from the alphabet which represent the letters a player can choose from to guess the letter</li>
-  </ul>
+    <ul>What does the application need to "remember" throughout its execution:</ul>
+      <li>words</li>
+        <ul>
+          <li>We will use an array with words that can be pulled at random to choose a word for the player to guess</li>
+        </ul>
+      <li>guesses</li>
+        <ul>
+          <li>The application must keep track of how many guesses are left and update the hangman picture and the value of number of guesses left on the screen
+          </li>
+          <li>We will use a variable called guessesLeft that decreases with each guess the player makes and if reaches zero will cause the game to be over</li>
+        </ul>
+      <li>letters</li>
+      <ul>
+        <li>We will use an array with all the letters from the alphabet which represent the letters a player can choose from to guess the letter</li>
+      </ul>

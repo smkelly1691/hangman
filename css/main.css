@@ -1,3 +1,91 @@
 body {
-    color: rgb(223, 112, 109);
+    background-color: white;
+    background-image: url("https://i.pinimg.com/originals/3a/59/2c/3a592cc5b14db41e1cc995b6a4a5b0f8.png");
+    background-size: 85%;
+    background-repeat: no-repeat;
+}
+
+
+
+.letters {
+    border: solid;
+    border-width: 5px 5px 5px 5px;
+    border-style: outset;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    padding: 5px;
+    margin: 0;
+    display: inline;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#alphabet {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 325px;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    background-color: rgb(175, 173, 173);
+    font-size: 1em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 500px;
+}
+
+.base {
+    height: 2px;
+    width: 300px;
+  }
+  
+.left-bar {
+    height: 400px;
+    width: 2px;
+  }
+  
+.top-bar {
+    height: 2px;
+    width: 200px;
+  }
+  
+.right-bar {
+    float: left;
+    height: 30px;
+    margin-left: 200px;
+    width: 2px;
+  }
+  
+.head {
+    border-radius: 100%;
+    background: none;
+    height: 50px;
+    width: 50px;
+}
+
+.torso {
+    height: 150px; 
+    width: 2px;
+}
+
+.left-arm, .right-arm, .left-leg, .right-leg {
+    height: 100px;
+    width: 2px;
+    tranform: rotate(35deg);
+}
+
+.right-leg, .left-leg {
+    tranform: rotate(140deg);
 }
