@@ -1,11 +1,15 @@
 body {
     background-color: white;
-    background-image: url("https://i.pinimg.com/originals/3a/59/2c/3a592cc5b14db41e1cc995b6a4a5b0f8.png");
-    background-size: 85%;
-    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }
 
-
+h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
 
 .letters {
     border: solid;
@@ -16,7 +20,6 @@ body {
     text-align: center;
     padding: 5px;
     margin: 0;
-    display: inline;
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -43,7 +46,8 @@ main {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin-left: 500px;
+    margin-left: 200px;
+    margin-right: 50px;
 }
 
 .base {
@@ -62,7 +66,6 @@ main {
   }
   
 .right-bar {
-    float: left;
     height: 30px;
     margin-left: 200px;
     width: 2px;
@@ -83,9 +86,9 @@ main {
 .left-arm, .right-arm, .left-leg, .right-leg {
     height: 100px;
     width: 2px;
-    tranform: rotate(35deg);
+    transform: rotate(35deg);
 }
 
 .right-leg, .left-leg {
-    tranform: rotate(140deg);
+    transform: rotate(140deg);
 }
