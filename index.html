@@ -5,12 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Roboto:wght@100&family=Romanesco&display=swap" rel="stylesheet">
     <script defer src="js/main.js"></script>
+    
     <title>Hangman</title>
 </head>
+
 <body>
 
-    <div id="hangman"></div>
+    <h1 class="dynamic-text-shadow">Hangman</h1>
+
+    <div id="hangman">
         <div class="base"></div>
         <div class="left-bar"></div>
         <div class="top-bar"></div>
@@ -21,12 +28,25 @@
         <div class="right-arm"></div>
         <div class="right-leg"></div>
         <div class="left-leg"></div>
+    </div>
 
 <main>
-    <h1>Hangman</h1>
 
     <div id="message-display">
-        <h2></h2>
+        <h2 class="dynamic-text-shadow">Pick A Letter!</h2>
+    </div>
+
+    <div id="currentWord">
+        <div>J</div>
+        <div>A</div>
+        <div>V</div>
+        <div>A</div>
+        <div>S</div>
+        <div>C</div>
+        <div>R</div>
+        <div>I</div>
+        <div>P</div>
+        <div>T</div>
     </div>
 
     <div id="alphabet">
@@ -58,13 +78,12 @@
         <div id="l26" class="letters">z</div>
     </div>
 
-    <div id="currentWord"></div>
-    <p id="numGuessesLeft"></p>
+    <p id="numGuessesLeft">You Have 10 Guesses Left</p>
     
     <div id="resetbtn">
         <button>Reset Game</button>
     </div>
-</main>
- 
+
+</main> 
 </body>
 </html>

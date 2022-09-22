@@ -8,7 +8,7 @@ const  WORDS = [
 ]
 
 // String for each letter of the alphabet to create player choices
-const ALPHABET = [
+const LETTERS = [
     "a", "b", "c", "d", "e", "f", "g", "h", "i", 
     "j", "k", "l", "m", "n", "o", "p", "q", "r", 
     "s", "t", "u", "v", "w", "x", "y", "z"
@@ -47,14 +47,18 @@ function render() {
 // Choose a word from the WORDS array at random for the player to guess
 const randomWord = Math.floor(Math.random() * this.WORDS.length);
 return this.WORDS[randomWord];
- 
-// Fill the letter buttons with the letters of the alphabet 
-function fillLetters() {
-    for(let i=0; i<ALPHABET.length; i++) {
-        ALPHABET[i] = document.querySelectorAll(".letters", i);
-    }
-    
-}
+
+
+
+// Make user input uppercase and check whether it is a single numeric value 
+// and contained within the random word generated
+function (checkLetter)
+
+
+
+// Generate underscores that match the word length
+
+
 
 }
 
@@ -63,4 +67,4 @@ function handleResetClick() {
 }
 
 // GAME START
-  init()
+    init()
