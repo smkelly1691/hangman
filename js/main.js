@@ -5,66 +5,46 @@ const  WORDS = [
     "object",
     "array",
     "function",
-]
+    "array",
+];
 
-// String for each letter of the alphabet to create player choices
-const LETTERS = [
-    "a", "b", "c", "d", "e", "f", "g", "h", "i", 
-    "j", "k", "l", "m", "n", "o", "p", "q", "r", 
-    "s", "t", "u", "v", "w", "x", "y", "z"
-]
+const ALPHABET = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 
+                'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+                't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
 /*----- state variables -----*/
-let word, 
-    guesses, 
-    numGuesses, 
-    numGuessesLeft, 
-    numCorrectGuesses,
-    numChar
+let secretWord, //random secret word selected by computer
+    randomNum, //random number that will aid in grabbing a random word to guess
+    underscore, //used to represent the word to guess with an array of underscores
+    playerGuess, //letter selected by player from letter button
+    guesses, //array of stored guesses
+    remGuesses, //remaining guesses until player loses game
+    numCorrectGuesses, //number of correct guesses
+    numChar //number of spaces in secret word
 
 /*----- cached elements  -----*/
-const numGuessesLeftEl = document.getElementById("numGuessesLeft");
-const messageDisplayEl = document.querySelector('h2')
-
+const underScoreEl = document.getElementsByClassName("underscore");
+const rightGuessEl = document.getElementsByClassName("goodGuess");
+const wrongGuessEl = document.getElementsByClassName("badGuess");
 
 /*----- event listeners -----*/
 resetBtnEl.addEventListener("click", handleResetClick)
-letterEl.addEventListener("click", handleLetterClick)
 
 /*----- functions -----*/
 // Create initial game state (Initialize Game)
 function init() {
-    word = ""
-    guesses = [null]
-    numGuesses = 0
-    numGuessesLeft = 10
-    numCorrectGuesses = 0
-    numChar = 0
-    render()
-}
-
-function render() {
-// Choose a word from the WORDS array at random for the player to guess
-const randomWord = Math.floor(Math.random() * this.WORDS.length);
-return this.WORDS[randomWord];
+   randomNum = Math.floor(Math.random() * WORDS.length);
+    secretWord = WORDS[randomNum];
+    console.log(secretWord);
+    rightWord = [];
+    wrongWord = [];
+  }
 
 
+  function handleResetClick() {
+    init();
+  }
 
-// Make user input uppercase and check whether it is a single numeric value 
-// and contained within the random word generated
-function (checkLetter)
-
-
-
-// Generate underscores that match the word length
-
-
-
-}
-
-function handleResetClick() {
-    init()
-}
 
 // GAME START
     init()
