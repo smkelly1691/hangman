@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,52 +10,45 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Roboto:wght@100&family=Romanesco&display=swap" rel="stylesheet">
     <script defer src="js/main.js"></script>
+    
     <title>Hangman</title>
 </head>
+
 <body>
 
-    <div class="container">
-        <header>
-            <h1 class="dynamic-text-shadow">Hangman</h1>
-            <br>
-            <p class="display-message"></p>
-            <br>
-            <h2 class="dynamic-text-shadow">Category: Software Engineering</h2>
-            <button class="start">Start Game</button>
-        </header>
-        <div class="underscore">_ _ _ _</div>
-        <div class="good-guess">Good Job</div>
-        <div class="bad-guess">Try Again</div>
+    <h1 class="dynamic-text-shadow">Hangman</h1>
 
-        <div id="alphabet">
-            <button id="l1" class="letters">a</button>
-            <button id="l2" class="letters">b</button>
-            <button id="l3" class="letters">c</button>
-            <button id="l4" class="letters">d</button>
-            <button id="l5" class="letters">e</button>
-            <button id="l6" class="letters">f</button>
-            <button id="l7" class="letters">g</button>
-            <button id="l8" class="letters">h</button>
-            <button id="l9" class="letters">i</button>
-            <button id="l10" class="letters">j</button>
-            <button id="l11" class="letters">k</button>
-            <button id="l12" class="letters">l</button>
-            <button id="l13" class="letters">m</button>
-            <button id="l14" class="letters">n</button>
-            <button id="l15" class="letters">o</button>
-            <button id="l16" class="letters">p</button>
-            <button id="l17" class="letters">q</button>
-            <button id="l18" class="letters">r</button>
-            <button id="l19" class="letters">s</button>
-            <button id="l20" class="letters">t</button>
-            <button id="l21" class="letters">u</button>
-            <button id="l22" class="letters">v</button>
-            <button id="l23" class="letters">w</button>
-            <button id="l24" class="letters">x</button>
-            <button id="l25" class="letters">y</button>
-            <button id="l26" class="letters">z</button>
-        </div>
-        <button id="reset">Start Over</button>
+    <!-- <div id="hangman">
+        <div class="base"></div>
+        <div class="left-bar"></div>
+        <div class="top-bar"></div>
+        <div class="right-bar"></div>
+        <div class="head"></div>
+        <div class="torso"></div>
+        <div class="left-arm"></div>
+        <div class="right-arm"></div>
+        <div class="right-leg"></div>
+        <div class="left-leg"></div>
+    </div> -->
+
+<main>
+
+    <h2 class="dynamic-text-shadow" id="display-message">Pick A Letter!</h2>
+
+    <h1 class="underscore" id="currentWord">_ _ _ _</h1>
+
+    <div id="buttons"></div>
+
+    <p id="numGuessesLeft"></p>
+    
+    <p class="guesses"></p>
+   
+    <div id="answer-array"></div>
+    
+    <div>
+        <button id="reset">Reset Game</button>
     </div>
+
+</main> 
 </body>
 </html>
