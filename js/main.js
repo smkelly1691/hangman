@@ -155,30 +155,5 @@ function handleResetClick() {
 }
 
 
-
-//     remainingLetters = secretWord.length;
-//     playerGuess = [];
-//     rightWord = [];
-//     wrongWord = [];
-//     makeButtons();
-
-//   function render() {
-//     if (remainingLetters > 0) {
-//       displayMessageEl.innerHTML = 
-//       `Pick a letter! Or press the Reset button to stop playing`
-//       if (playerGuess === null) {
-//         displayMessageEl.innerText = "Pick a letter button";
-//        } else if (playerGuess.length !==1) {
-//         displayMessageEl.innerText = "Please enter a single letter";
-//         } else {
-//           for (let j = 0; j < secretWord.length; j++) {
-//             answerArray.join[playerGuess];
-//             answerArray[j] = playerGuess; remainingLetters--;
-//           }
-//         }
-//       }
-//     }
-
-
 // GAME START
     init()
