@@ -1,9 +1,9 @@
 <h1>Hangman</h1>
-<h2>Hangman is a word-guessing game where the player chooses letters of the alphabet to populate a random word. The goal is to populate all the letters in the word prior to running out of guesses.</h2>
+<h2>User Stories, Wireframe, and Pseudocode for Hangman Game</h2>
 
-<h3>Game Images</h3>
+<h3>User Stories / MVP</h3>
 <ul>
-  <li><a href="https://i.imgur.com/RIrn9h7.png"><img src="https://i.imgur.com/RIrn9h7.png" title="source: imgur.com" /></a></li>
+  <li>As a user, I want to be able to see a display message that tells me what to do next (ex. Pick a letter!, Try again!, Good Job! Pick another Letter!, etc. )</li>
   <li>As a user, I want to see a gallow and a blank space where the hangman will be built as wrong guesses are chosen</li>
   <li>As a user, I want to see how many guesses I have left until I lose the game and the hangman will be complete</li>
   <li>As a user, I want to see blank spaces/dashes that populate when I guess a correct letter of the word.</li>

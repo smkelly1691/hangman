@@ -104,3 +104,11 @@ main {
 #numGuessesLeft {
     font-size: 30px;
 }
+
+.word-display {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    font-size: 30px;
+}
