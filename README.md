@@ -14,7 +14,6 @@
 
 <h3>Getting Started</h3>
 <h4>Game Link: <a href="https://smkelly1691.github.io/hangman/"></h4>
-<p> </p>
 
 <h4>Next Steps:</h4>
   <ul>
