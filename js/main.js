@@ -37,6 +37,7 @@ let answerArrayEl = document.getElementById("answer-array");
 let wordHolder = document.getElementById("hold");
 
 
+
 /*----- event listeners -----*/
 resetBtnEl.addEventListener('click', handleResetClick);
 
@@ -95,7 +96,7 @@ function generateUnderscores() {
     }
 
     comments = function () {
-      guessesLeftEl.innerHTML = "You have " + remGuesses + " lives";
+      guessesLeftEl.innerHTML = "You have " + remGuesses + " guesses left!";
       if (remGuesses < 1) {
         guessesLeftEl.innerHTML = "Game Over";
       }
@@ -136,7 +137,6 @@ function generateUnderscores() {
         if (secretWord[i] === geuss) {
           geusses[i].innerHTML = geuss;
           counter += 1;
-          fillBlanks();
         } 
       }
       let j = (secretWord.indexOf(geuss));
@@ -148,26 +148,20 @@ function generateUnderscores() {
       }
     }
   }
-
-  function fillBlanks () {
-    numGuessEl[0].innerHTML = underScoreEl;
-  }
   
-  
-
 function render() {
   generateUnderscores();
   buttons();
   result();
   comments();
-  // fillBlanks();
 }
 
 function handleResetClick() {
-  init();
   myButtons.removeChild(letters);
   letters.removeChild(list);
   correct.removeChild(guess);
+  wordHolder.innerHTML = [null];
+  init();
 }
 
 
