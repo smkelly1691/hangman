@@ -22,16 +22,19 @@ let randomNum, //random number that will aid in grabbing a random word to guess
     remGuesses, //remaining guesses until player loses game
     numGuesses, //number of guesses
     remainingLetters, //checking the length of the secret word to provide player status
-    correctGuesses
+    counter,
+    space,
+    correct
 
 /*----- cached elements  -----*/
 let underScoreEl = document.getElementsByClassName("underscore");
 let displayMessageEl = document.getElementById("display-message");
 let resetBtnEl = document.getElementById("reset");
 let numGuessEl = document.getElementsByClassName("guesses");
-let boardEl = document.getElementsByClassName("buttons");
+let boardEl = document.getElementById("buttons");
 let guessesLeftEl = document.getElementById("numGuessesLeft");
-let answerArrayEl = document.getElementById("answer-array")
+let answerArrayEl = document.getElementById("answer-array");
+let wordHolder = document.getElementById("hold");
 
 
 /*----- event listeners -----*/
@@ -42,14 +45,16 @@ resetBtnEl.addEventListener('click', handleResetClick);
 // Create initial game state (Initialize Game)
 function init() {
   displayMessageEl.innerHTML="Pick A Letter!";
-  guesses = [];
+  wordHolder = [ ];
+  geusses = [ ];
+  space = 0
   remGuesses=10;
   guessesLeftEl.innerHTML="You have " + remGuesses + " guesses left";
   secretWord = null;
   pickWord();
-  underscore = [];
-  playerGuess = [];
-  correctGuesses = 0;
+  underscore = [ ];
+  playerGuess = [ ];
+  counter = 0;
   remainingLetters = secretWord.length;
   render();
 }
@@ -74,8 +79,9 @@ function generateUnderscores() {
     return underscore;
   }
   
-  function createKeyboard() {
-      myButtons = document.getElementById('buttons');
+    let buttons = function() {
+      myButtons = 
+      document.getElementById('buttons');
       letters = document.createElement('ul');
       for (let j = 0; j < ALPHABET.length; j++) {
         letters.id = 'alphabet';
@@ -88,36 +94,14 @@ function generateUnderscores() {
       }
     }
 
-    function resultMessage() {
-      displayMessageEl.innerHTML = "You have " + remGuesses + " guesses left";
+    comments = function () {
+      guessesLeftEl.innerHTML = "You have " + remGuesses + " lives";
       if (remGuesses < 1) {
-        displayMessageEl.innerHTML = "Game Over";
+        guessesLeftEl.innerHTML = "Game Over";
       }
-      for (let m = 0; m < guesses.length; m++) {
-        if (numGuesses + remainingLetters === guesses.length)
-    {
-          displayMessageEl.innerHTML = "You Win!";
-        }
-      }
-    }
-
-    function check() {
-      list.onclick = function () {
-        let playerGeuss = (this.innerHTML);
-        this.setAttribute("class", "active");
-        this.onclick = null;
-        for (let k = 0; k < secretWord.length; k++) {
-          if (secretWord[k] === playerGeuss) {
-            guesses[k].innerHTML = playerGeuss;
-            correctGuesses += 1;
-          } 
-        }
-        let l = (secretWord.indexOf(playerGeuss));
-        if (l === -1) {
-          remGuesses -= 1;
-          resultMessage();
-        } else {
-          resultMessage();
+      for (let i = 0; i < geusses.length; i++) {
+        if (counter + space === geusses.length) {
+          guessesLeftEl.innerHTML = "You Win!";
         }
       }
     }
@@ -128,30 +112,62 @@ function generateUnderscores() {
   
       for (let i = 0; i < secretWord.length; i++) {
         correct.setAttribute('id', 'my-word');
-        playerGuess = document.createElement('li');
-        playerGuess.setAttribute('class', 'guess');
+        guess = document.createElement('li');
+        guess.setAttribute('class', 'guess');
         if (secretWord[i] === "-") {
-          playerGuess.innerHTML = "-";
-          remainingLetters = 1;
+          guess.innerHTML = "-";
+          space = 1;
         } else {
-          playerGuess.innerHTML = "_";
+          guess.innerHTML = "_";
         }
   
-        geusses.push(playerGuess);
+        geusses.push(guess);
         wordHolder.appendChild(correct);
-        correct.appendChild(playerGuess);
+        correct.appendChild(guess);
       }
     }
 
+  check = function () {
+    list.onclick = function () {
+      let geuss = (this.innerHTML);
+      this.setAttribute("class", "active");
+      this.onclick = null;
+      for (let i = 0; i < secretWord.length; i++) {
+        if (secretWord[i] === geuss) {
+          geusses[i].innerHTML = geuss;
+          counter += 1;
+          fillBlanks();
+        } 
+      }
+      let j = (secretWord.indexOf(geuss));
+      if (j === -1) {
+        remGuesses -= 1;
+        comments();
+      } else {
+        comments();
+      }
+    }
+  }
+
+  function fillBlanks () {
+    numGuessEl[0].innerHTML = underScoreEl;
+  }
+  
+  
+
 function render() {
   generateUnderscores();
-  createKeyboard();
+  buttons();
+  result();
+  comments();
+  // fillBlanks();
 }
 
 function handleResetClick() {
   init();
   myButtons.removeChild(letters);
   letters.removeChild(list);
+  correct.removeChild(guess);
 }
 
 
