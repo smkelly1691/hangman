@@ -13,6 +13,7 @@
 <p>HTML
 
 <h3>Getting Started</h3>
+<h4><a href="https://smkelly1691.github.io/hangman/"> Link to Game</a>
 
 <h4>Next Steps:</h4>
   <ul>
