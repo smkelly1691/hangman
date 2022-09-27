@@ -10,7 +10,7 @@
 <h3>Technologies Used</h3>
 <p>JavaScript</p>
 <p>CSS</p>
-<p>HTML
+<p>HTML</p>
 
 <h3>Getting Started</h3>
 <h4>Game Link: <a href="https://smkelly1691.github.io/hangman/"></h4>
